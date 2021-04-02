@@ -1,0 +1,128 @@
+div.Game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 3px solid dimgray;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+div.PlayerSpace {
+  display: flex;
+  justify-content: flex-start;
+}
+
+table.Board {
+  border: 1px solid black;
+}
+
+table.Board td {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+table.Board td.Blocked {
+  background-color: black;
+}
+
+table.Board td.Boat {
+  background-color: #1e90ff;
+}
+
+div.AvailableBoats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.AvailableBoat {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid black;
+  height: 20px;
+}
+
+div.AvailableBoat div {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: inherit;
+}
+
+button.StartButton,
+button.ReloadButton {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 25px;
+}
+
+div.CentralArea div div {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+div.ALERT {
+  background-color: #ffcc00;
+}
+
+div.INFO {
+  background-color: #339900;
+}
+
+div.CentralArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.CentralArea div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.AvailableBoat div.HoverBoat {
+  background-color: #f08080;
+}
+
+div.AvailableBoat div.SelectedBoat {
+  background-color: #1e90ff;
+}
+
+div.AvailableBoat div.DefaultBoat {
+  background-color: white;
+}
+
+table.Board td.ShotBoat {
+  background-color: #9acd32;
+}
+
+table.Board td.MissedBoat {
+  background-color: #f08080;
+}
+
+table.Board td.AvailableLocation {
+  background-color: #9acd32;
+}
+
+table.Board td.BlockedLocation {
+  background-color: #f08080;
+}
+
+table.Board td.BoatLocation {
+  background-color: #1e90ff;
+}
+
+table.Board td.DefaultLocation {
+  background-color: white;
+}
