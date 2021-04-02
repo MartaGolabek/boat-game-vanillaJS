@@ -2,6 +2,8 @@
 
 Boat game implemented in vanilla JS following object-oriented approach
 
+To play the game, start local development server (e.g. Live Server in VSCode) and open the game in a browser. Please use Google Chrome, it fully supports features used in this project such as private methods. 
+
 ## Game Initialization
 
 You can play as many games as fit on your screen.
