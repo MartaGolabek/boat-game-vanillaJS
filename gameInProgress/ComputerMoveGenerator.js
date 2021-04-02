@@ -36,8 +36,6 @@ export default class ComputerMoveGenerator {
 
     this.#wasLastShotSuccessful = this.#playerProgressBoard.isBoat(nextShot);
     if (this.#wasLastShotSuccessful) {
-      console.log("Suvvesful");
-      console.log(nextShot);
       this.#targetedBoat.push(nextShot);
     }
     return nextShot;
@@ -52,19 +50,15 @@ export default class ComputerMoveGenerator {
 
   #generateNextShotSmartly(targetedBoat) {
     let nextShot;
-    console.log(targetedBoat);
     if (targetedBoat.length > 1 && targetedBoat[0].y === targetedBoat[1].y) {
-      console.log("I am horizontal");
       nextShot = this.#generateNextMoveIfTargetedBoatIsHorizontal(targetedBoat);
     }
 
     if (targetedBoat.length > 1 && targetedBoat[0].x === targetedBoat[1].x) {
-      console.log("I am vertical");
       nextShot = this.#generateNextMoveIfTargetedBoatIsVertical(targetedBoat);
     }
 
     if (targetedBoat.length === 1) {
-      console.log("I am one mast");
       nextShot = this.#generateNextMoveIfOnlyOneMastKnown(targetedBoat);
     }
 
@@ -74,28 +68,23 @@ export default class ComputerMoveGenerator {
   #generateNextMoveIfOnlyOneMastKnown(targetedBoat) {
     let nextShot;
     targetedBoat.forEach((boatLocation) => {
-      console.log(boatLocation);
       if (this.#isAvailableForShot(boatLocation.left())) {
-        console.log("left");
         nextShot = boatLocation.left();
         // return immediately and stop loop
         return;
       }
 
       if (this.#isAvailableForShot(boatLocation.up())) {
-        console.log("up");
         nextShot = boatLocation.up();
         return;
       }
 
       if (this.#isAvailableForShot(boatLocation.right())) {
-        console.log("right");
         nextShot = boatLocation.right();
         return;
       }
 
       if (this.#isAvailableForShot(boatLocation.down())) {
-        console.log("down");
         nextShot = boatLocation.down();
         return;
       }
